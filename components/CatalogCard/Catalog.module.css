@@ -1,0 +1,38 @@
+.cardImage {
+  border-radius: 16px;
+}
+.card {
+  display: flex;
+  gap: 24px;
+  border-radius: 16px;
+  padding: 24px;
+  width: 888px;
+  height: 312px;
+  background: #f7f7f7;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.reviews {
+  display: flex;
+  gap: 16px;
+}
+.cardList {
+  display: flex;
+  gap: 8px;
+}
+.cardItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 8px;
+  border-radius: 100px;
+  padding-block: 12px;
+  padding-inline: 18px;
+  min-width: 109px;
+  height: 48px;
+  background: #f2f4f7;
+  mix-blend-mode: multiply;
+}

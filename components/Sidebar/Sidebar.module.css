@@ -1,0 +1,190 @@
+.sidebar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 48px;
+  border-radius: 20px;
+  padding: 24px;
+  width: 360px;
+  height: 840px;
+  background: #f7f7f7;
+  margin-left: 63px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+.filterFieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  outline: none;
+  border-radius: 12px;
+  padding-block: 18px;
+  padding-inline: 48px;
+  width: 312px;
+  height: 56px;
+  border: none;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+.filterCheckbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filterWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.checkboxDescription {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+  padding-bottom: 8px;
+}
+.spanText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+  padding-left: 8px;
+}
+.filterTitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+}
+.inputWrapper {
+  position: relative;
+  padding-bottom: 40px;
+}
+.iconMap {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  pointer-events: none;
+}
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.btnSearch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  outline: none;
+  border: none;
+  gap: 10px;
+  border-radius: 200px;
+  padding-block: 16px;
+  padding-inline: 60px;
+  width: 312px;
+  height: 56px;
+  background: #829b91;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.buttonClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  padding-block: 16px;
+  padding-inline: 32px;
+  width: 312px;
+  height: 56px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
+}
+
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-size: 16px;
+  color: #101828;
+}
+
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+}
+
+.radioCustom {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 1px solid #475467;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.radioCustom::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #475467;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.radioInput:checked ~ .radioCustom::after {
+  transform: scale(1);
+}
+
+.radioInput:focus-visible ~ .radioCustom {
+  outline: 2px solid #475467;
+  outline-offset: 2px;
+}
