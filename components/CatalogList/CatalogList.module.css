@@ -2,4 +2,22 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 40px;
+}
+.btnLoadMore {
+  margin-bottom: 40px;
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  padding-block: 16px;
+  padding-inline: 32px;
+  width: 145px;
+  height: 56px;
+  gap: 10px;
 }

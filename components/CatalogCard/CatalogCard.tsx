@@ -23,39 +23,47 @@ export default function CatalogCard({ camper }: CatalogCardProps) {
           height={240}
           alt={camper.name}
         />
-
         <div className={css.wrapper}>
           <div className={css.content}>
             <div className={css.header}>
-              <h2>{camper.name}</h2>
-              <p>{camper.price}</p>
+              <h2 className={css.title}>{camper.name}</h2>
+              <p className={css.price}>€{camper.price}</p>
             </div>
             <div className={css.reviews}>
               <p>
                 <FaStar color="#ffc531" size={16} />
-                {camper.rating}({camper.totalReviews})
+                {camper.rating}({camper.totalReviews} Reviews)
               </p>
-              <p>
+              <p className={css.locationText}>
                 <FiMap size={16} />
-                {camper.location}
+                {camper.location.split(", ").reverse().join(", ")}
               </p>
             </div>
-            <ul className={css.cardList}>
-              <li className={css.cardItem}>
-                <BsFuelPump size={20} />
-                {camper.engine}
-              </li>
-              <li className={css.cardItem}>
-                <BiSitemap size={20} />
-                {camper.transmission}
-              </li>
-              <li className={css.cardItem}>
-                {" "}
-                <IoMdCar size={20} />
-                {camper.form}
-              </li>
-            </ul>
           </div>
+
+          <p className={css.description}>{camper.description}</p>
+
+          <ul className={css.cardList}>
+            <li className={css.cardItem}>
+              <BsFuelPump size={20} />
+              {camper.engine[0].toUpperCase() +
+                camper.engine.slice(1).replace("_", " ")}
+            </li>
+            <li className={css.cardItem}>
+              <BiSitemap size={20} />
+              {camper.transmission[0].toUpperCase() +
+                camper.transmission.slice(1).replace("_", " ")}
+            </li>
+            <li className={css.cardItem}>
+              <IoMdCar size={20} />
+              {camper.form[0].toUpperCase() +
+                camper.form.slice(1).replace("_", " ")}
+            </li>
+          </ul>
+
+          <button type="button" className={css.btnShowMore}>
+            Show more
+          </button>
         </div>
       </article>
     </>

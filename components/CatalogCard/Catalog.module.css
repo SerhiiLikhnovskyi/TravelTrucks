@@ -22,6 +22,13 @@
   display: flex;
   gap: 8px;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 524px;
+  gap: 24px;
+}
 .cardItem {
   display: flex;
   align-items: center;
@@ -35,4 +42,46 @@
   height: 48px;
   background: #f2f4f7;
   mix-blend-mode: multiply;
+}
+.description {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #475467;
+}
+.price {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btnShowMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 200px;
+  padding-block: 16px;
+  width: 173px;
+  height: 56px;
+  border: none;
+  background: #829b91;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+.locationText {
+  display: flex;
+  gap: 4px;
 }

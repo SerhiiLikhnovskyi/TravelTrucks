@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 16px;
+
+  width: 888px;
+  height: 840px;
+  background: #f7f7f7;
+}
+.image {
+  padding-bottom: 21px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 43px;
+  gap: 16px;
+}
+.btnWrapper {
+  display: flex;
+  gap: 16px;
+}
+.btnClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  border: 1px solid #dadde1;
+  border-radius: 200px;
+  padding-block: 16px;
+  width: 192px;
+  height: 56px;
+  background: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #101828;
+}
+.btnView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  outline: none;
+  border: none;
+  border-radius: 200px;
+  padding-block: 16px;
+  width: 192px;
+  height: 56px;
+  background: #829b91;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+}

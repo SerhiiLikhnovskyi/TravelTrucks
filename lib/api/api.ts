@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Filters } from "../store/useStore";
 
 const apiNext = axios.create({
   baseURL: "https://campers-api.goit.study",
@@ -15,6 +16,7 @@ export interface Camper {
   width: string;
   height: string;
   tank: string;
+  description: string;
   consumption: string;
   transmission: string;
   engine: string;
@@ -22,13 +24,9 @@ export interface Camper {
   coverImage: string;
   totalReviews: number;
 }
-export interface FetchCampersParams {
-  location?: string;
-  form?: string;
-  engine?: string;
-  transmission?: string;
+export interface FetchCampersParams extends Filters {
   page?: number;
-  limit?: number;
+  perPage?: number;
 }
 export interface CampersResponse {
   page: number;
