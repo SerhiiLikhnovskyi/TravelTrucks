@@ -7,6 +7,7 @@ import { FiMap } from "react-icons/fi";
 import { IoMdCar } from "react-icons/io";
 import { BiSitemap } from "react-icons/bi";
 import { BsFuelPump } from "react-icons/bs";
+import Link from "next/link";
 
 interface CatalogCardProps {
   camper: Camper;
@@ -61,9 +62,14 @@ export default function CatalogCard({ camper }: CatalogCardProps) {
             </li>
           </ul>
 
-          <button type="button" className={css.btnShowMore}>
+          <Link
+            href={`/catalog/${camper.id}`}
+            target="_blank"
+            type="button"
+            className={css.btnShowMore}
+          >
             Show more
-          </button>
+          </Link>
         </div>
       </article>
     </>

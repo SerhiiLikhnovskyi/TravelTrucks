@@ -6,6 +6,8 @@ import { getCampers } from "@/lib/api/api";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import css from "./CatalogList.module.css";
 import NoCampers from "../NoCampers/NoCampers";
+import Loader from "../Loader/Loader";
+import Modal from "../Modal/Modal";
 export default function CatalogList() {
   const filters = useFilterStore((state) => state.filters);
   const {
@@ -37,10 +39,10 @@ export default function CatalogList() {
   });
 
   const campers = data?.pages.flatMap((page) => page.campers) ?? [];
-  if (isLoading) return <p>Завантаження кемперів...</p>;
   if (isError) return <p>Помилка: {error?.message || "Щось пішло не так"}</p>;
   return (
     <>
+      {isLoading && <Modal />}
       {campers.length > 0 ? (
         <>
           <ul className={css.catalogList}>
@@ -55,12 +57,12 @@ export default function CatalogList() {
               onClick={() => fetchNextPage()}
               disabled={isFetchingNextPage}
             >
-              {isFetchingNextPage ? "Завантаження" : "Load more"}
+              {isFetchingNextPage ? <Loader /> : "Load more"}
             </button>
           )}
         </>
       ) : (
-        <NoCampers />
+        !isLoading && <NoCampers />
       )}
     </>
   );

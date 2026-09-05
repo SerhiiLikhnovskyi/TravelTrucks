@@ -1,0 +1,145 @@
+.formWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #dadde1;
+  border-radius: 16px;
+  padding: 44px;
+  min-width: 641px;
+  min-height: 382px;
+  gap: 24px;
+}
+
+.formDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formTitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #101828;
+}
+
+.formText {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #6c717b;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  width: 100%;
+  gap: 14px;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+}
+.inputWrapper:last-child {
+  margin-bottom: 24px;
+}
+.input {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding-block: 18px;
+  padding-inline: 18px 40px;
+  width: 100%;
+  height: 60px;
+  background: #f7f7f7;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #101828;
+}
+
+.inputError {
+  border-color: #e44848 !important;
+  background-color: #ffdfdf !important;
+}
+
+.errorLabel {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #6c717b;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+.labelFloating {
+  top: 0px;
+  font-size: 12px;
+  color: #6c717b;
+  background-color: #fff;
+  padding-inline: 4px;
+  border-radius: 4px;
+}
+.labelHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.labelError {
+  top: 0px;
+  font-size: 12px;
+  color: #e44848;
+  background-color: #ffdfdf;
+  padding-inline: 4px;
+  border-radius: 4px;
+}
+
+.errorIcon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transform: translateY(-10%);
+  color: #e44848;
+  pointer-events: none;
+}
+
+.error {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #e44848;
+  margin-top: 4px;
+  display: block;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border: none;
+  border-radius: 200px;
+  width: 527px;
+  height: 56px;
+  background: #829b91;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  cursor: pointer;
+}

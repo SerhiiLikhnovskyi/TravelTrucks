@@ -6,8 +6,8 @@ import css from "./NoCampers.module.css";
 import { useFilterStore } from "@/lib/store/useStore";
 
 export default function NoCampers() {
-  const clearFilters = useFilterStore((state) => state.resetForm);
-  const resetFilter = useFilterStore((state) => state.resetFilters);
+  const resetFilters = useFilterStore((state) => state.resetFilters);
+  const resetAllFilters = useFilterStore((state) => state.resetAllFilters);
 
   return (
     <div className={css.container}>
@@ -28,10 +28,10 @@ export default function NoCampers() {
         </p>
       </div>
       <div className={css.btnWrapper}>
-        <button onClick={() => clearFilters?.()} className={css.btnClear}>
+        <button onClick={() => resetFilters?.()} className={css.btnClear}>
           Clear filters
         </button>
-        <button onClick={() => resetFilter?.()} className={css.btnView}>
+        <button onClick={() => resetAllFilters?.()} className={css.btnView}>
           View all campers
         </button>
       </div>

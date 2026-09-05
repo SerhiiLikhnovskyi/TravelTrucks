@@ -11,8 +11,7 @@ interface FiltersState {
   filters: Filters;
   setFilters: (values: Filters) => void;
   resetFilters: () => void;
-  resetForm: (() => void) | null;
-  setResetForm: (resetForm: () => void) => void;
+  resetAllFilters: () => void;
 }
 
 export const useFilterStore = create<FiltersState>((set) => ({
@@ -23,11 +22,24 @@ export const useFilterStore = create<FiltersState>((set) => ({
     engine: null,
   },
 
-  resetForm: null,
   setFilters: (values) => set({ filters: values }),
+
   resetFilters: () =>
+    set((state) => ({
+      filters: {
+        ...state.filters,
+        form: null,
+        transmission: null,
+        engine: null,
+      },
+    })),
+  resetAllFilters: () =>
     set({
-      filters: { location: null, form: null, transmission: null, engine: null },
+      filters: {
+        location: null,
+        form: null,
+        transmission: null,
+        engine: null,
+      },
     }),
-  setResetForm: (resetForm) => set({ resetForm }),
 }));

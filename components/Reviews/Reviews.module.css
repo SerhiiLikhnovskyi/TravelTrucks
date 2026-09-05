@@ -1,0 +1,79 @@
+.reviewWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #101828;
+  margin-bottom: 24px;
+}
+.reviewList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 16px;
+  width: 623px;
+  height: 180px;
+  background: #f7f7f7;
+}
+.reviewerAvatar {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+}
+.avatar {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  color: #829b91;
+}
+.upperReviews {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.rating {
+  display: flex;
+  gap: 4px;
+}
+.titleReview {
+  margin-bottom: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #101828;
+}
+.star,
+.starActive {
+  font-size: 16px;
+}
+
+.star {
+  fill: #e4e5e9;
+}
+
+.starActive {
+  fill: #ffc107;
+}
+.comment {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  color: #475467;
+}

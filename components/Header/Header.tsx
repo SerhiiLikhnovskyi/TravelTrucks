@@ -6,8 +6,15 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
+  const isCatalog = pathname === "/catalog";
+
   return (
-    <div className={css.container}>
+    <div
+      className={`${css.container} ${!isHome ? "container" : ""} ${
+        !isHome ? css.gray : ""
+      }`}
+    >
       <div className={css.logoWrapper}>
         <Link href="/" className={css.logo}>
           <Image src="/Logo.svg" alt="Logo" priority width={136} height={16} />

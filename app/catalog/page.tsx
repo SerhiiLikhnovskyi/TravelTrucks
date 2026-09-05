@@ -5,7 +5,11 @@ import React from "react";
 export default function page() {
   return (
     <>
-      <Catalog />
+      <main>
+        <div className="container">
+          <Catalog />
+        </div>
+      </main>
     </>
   );
 }
