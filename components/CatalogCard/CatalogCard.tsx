@@ -31,7 +31,7 @@ export default function CatalogCard({ camper }: CatalogCardProps) {
               <p className={css.price}>€{camper.price}</p>
             </div>
             <div className={css.reviews}>
-              <p>
+              <p className={css.locationText}>
                 <FaStar color="#ffc531" size={16} />
                 {camper.rating}({camper.totalReviews} Reviews)
               </p>

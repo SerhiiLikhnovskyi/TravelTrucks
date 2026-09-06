@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css/bundle";
 import type { Swiper as SwiperType } from "swiper";
 import { FreeMode, Thumbs } from "swiper/modules";
