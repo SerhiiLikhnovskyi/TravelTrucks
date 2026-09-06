@@ -1,52 +1,49 @@
 TravelTrucks
 
-Фронтенд вебзастосунку для компанії TravelTrucks, яка займається орендою кемперів. Користувач може переглянути каталог кемперів, відфільтрувати за локацією, типом кузова, двигуна та трансмісії, а також переглянути детальну інформацію про обраний кемпер і забронювати його.
+Frontend web application for TravelTrucks, a campervan rental company. Users can browse a catalog of campers, filter them by location, vehicle form, engine type, and transmission, and view detailed information about a selected camper along with a booking option.
 
-Демо
+Demo
 
-🔗 Живий проєкт: посилання додам після деплою
+🔗 Live project: https://travel-trucks-psi-nine.vercel.app/
 
-Основні функції
-Домашня сторінка з банером і переходом до каталогу.
-Каталог кемперів:
-фільтрація за локацією, типом кузова, типом двигуна та типом трансмісії (фільтрація на бекенді через query-параметри);
-пагінація у форматі "Load More" (довантаження по 4 картки з урахуванням активних фільтрів).
-Сторінка деталей кемпера (відкривається в новій вкладці):
-галерея зображень на базі Swiper;
-відгуки користувачів з рейтингом у форматі п'ятизіркової шкали;
-форма бронювання з валідацією полів та надсиланням даних на бекенд;
-нотифікація про успішне бронювання.
-Індикатори завантаження (loader) під час асинхронних запитів.
-Технології
+Features
+Home page with a hero banner and a link to the catalog.
+Camper catalog:
+filtering by location, vehicle form, engine type, and transmission (filtering handled on the backend via query parameters);
+"Load More" pagination (loads 4 additional cards at a time, respecting active filters).
+Camper details page (opens in a new tab):
+image gallery built with Swiper;
+user reviews with a five-star rating display;
+booking form with field validation and data submission to the backend;
+success notification after booking.
+Loading indicators during asynchronous requests.
+Tech Stack
 Next.js (App Router)
 TypeScript
-TanStack Query — запити до API та useInfiniteQuery для пагінації
-Formik + Yup — форми та валідація
-Zustand — глобальний стан фільтрів
-Swiper — галерея зображень
-React Icons — іконки
-CSS Modules — стилізація
+TanStack Query — API requests and useInfiniteQuery for pagination
+Formik + Yup — forms and validation
+Zustand — global filters state
+Swiper — image gallery
+React Icons — icons
+CSS Modules — styling
 API
 
-Дані про кемпери, фільтри та відгуки надходять з бекенду: https://campers-api.goit.study
+Camper data, filters, and reviews are fetched from the backend: https://campers-api.goit.study
 
-Встановлення та запуск
-Клонуйте репозиторій:
+Installation and Usage
+Clone the repository:
 bash
 git clone https://github.com/SerhiiLikhnovskyi/TravelTrucks.git
 cd TravelTrucks
-Встановіть залежності:
+Install dependencies:
 bash
 npm install
-Запустіть проєкт у режимі розробки:
+Run the project in development mode:
 bash
 npm run dev
-Відкрийте http://localhost:3000 у браузері.
-Структура сторінок
-Маршрут Опис
-/ Домашня сторінка з банером
-/catalog Каталог кемперів з фільтрами та пагінацією
-/catalog/[camperId] Деталі кемпера: галерея, відгуки, форма бронювання
-Автор
-
-Serhii Likhnovskyi GitHub: github.com/SerhiiLikhnovskyi
+Open http://localhost:3000 in your browser.
+Page Structure
+Route Description
+/ Home page with hero banner
+/catalog Camper catalog with filters and pagination
+/catalog/[camperId] Camper details: gallery, reviews, booking form
