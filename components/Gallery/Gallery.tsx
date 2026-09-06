@@ -22,7 +22,7 @@ export default function Gallery({ gallery }: Props) {
     <div className={css.gallery}>
       <Swiper
         navigation
-        modules={[Navigation, Thumbs]}
+        modules={[Thumbs]}
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
@@ -46,7 +46,7 @@ export default function Gallery({ gallery }: Props) {
         slidesPerView="auto"
         freeMode
         watchSlidesProgress
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Thumbs]}
         className={css.secondSwiper}
       >
         {gallery.map((image) => (
