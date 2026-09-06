@@ -1,4 +1,3 @@
-import { Camper } from "@/lib/api/api";
 import css from "./Catalog.module.css";
 import React from "react";
 import Image from "next/image";
@@ -8,6 +7,7 @@ import { IoMdCar } from "react-icons/io";
 import { BiSitemap } from "react-icons/bi";
 import { BsFuelPump } from "react-icons/bs";
 import Link from "next/link";
+import { Camper } from "@/types/types";
 
 interface CatalogCardProps {
   camper: Camper;

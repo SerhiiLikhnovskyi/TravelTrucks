@@ -1,5 +1,12 @@
 import axios from "axios";
-import { BookingRequest, Camper, CamperFilters, CampersResponse, FetchCampersParams, GetCampersReviews } from "@/types/types";
+import {
+  BookingRequest,
+  Camper,
+  CamperFilters,
+  CampersResponse,
+  FetchCampersParams,
+  GetCampersReviews,
+} from "@/types/types";
 
 const apiNext = axios.create({
   baseURL: "https://campers-api.goit.study",
