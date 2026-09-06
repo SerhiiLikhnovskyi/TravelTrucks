@@ -5,134 +5,20 @@
 }
 .camperContainer {
   padding-top: 64px !important;
-}
-.content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  border-radius: 16px;
-  padding: 24px;
-  width: 650px;
-  height: 304px;
-  background: #f7f7f7;
-}
-.title {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33333;
-  color: #101828;
-  margin-bottom: 8px;
-}
-.location {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 16px;
+  padding-bottom: 287px;
 }
 
-.price {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 1.33333;
-  color: #101828;
-  margin-bottom: 24px;
-}
-
-.textIcon {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.descriptionText {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #475467;
-}
-
-.details {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 16px;
-  border-radius: 16px;
-  padding: 24px;
-  width: 650px;
-  height: 360px;
-  background: #f7f7f7;
-}
-
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-height: 120px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #d0d5dd transparent;
-}
-.list::-webkit-scrollbar {
-  width: 6px;
-}
-.list::-webkit-scrollbar-track {
-  background: transparent;
-}
-.list::-webkit-scrollbar-thumb {
-  background: #d0d5dd;
-  border-radius: 10px;
-}
-.listItem {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 8px;
-  border-radius: 100px;
-  padding-block: 12px;
-  padding-inline: 18px;
-  min-width: 59px;
-  height: 48px;
-  background: #f2f4f7;
-  mix-blend-mode: multiply;
-  overflow: hidden;
-}
-
-.description {
-  width: 100%;
-}
-
-.descriptionDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  padding-top: 16px;
-  border-top: 1px solid #dadde1;
-}
 .wrapper {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-.detailItem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  line-height: 1.5;
-  color: #101828;
-}
+
 .bottomContent {
   display: flex;
   gap: 40px;
   justify-content: space-between;
+}
+.title {
+  margin-bottom: 4px;
 }

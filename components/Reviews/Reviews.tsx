@@ -4,12 +4,15 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import css from "./Reviews.module.css";
 import { FaStar } from "react-icons/fa";
+import Loader from "../Loader/Loader";
 
 export default function Reviews({ camperId }: { camperId: string }) {
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ["reviews", camperId],
     queryFn: () => getReviews(camperId),
   });
+  if (isLoading) return <Loader />;
+  if (isError) return <p>Помилка завантаження відгуків: {error.message}</p>;
   return (
     <div>
       <section>

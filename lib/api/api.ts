@@ -5,6 +5,11 @@ const apiNext = axios.create({
   baseURL: "https://campers-api.goit.study",
 });
 
+export interface CamperFilters {
+  forms: string[];
+  transmissions: string[];
+  engines: string[];
+}
 export interface Camper {
   id: string;
   name: string;
@@ -64,6 +69,10 @@ export async function getCampers(
 ): Promise<CampersResponse> {
   const response = await apiNext.get<CampersResponse>("/campers", { params });
   return response.data;
+}
+export async function getFilters(): Promise<CamperFilters> {
+  const { data } = await apiNext.get<CamperFilters>("/campers/filters");
+  return data;
 }
 
 export async function getCamperById(camperId: string): Promise<Camper> {

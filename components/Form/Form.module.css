@@ -18,7 +18,6 @@
 }
 
 .formTitle {
-  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
@@ -26,10 +25,6 @@
 }
 
 .formText {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   color: #6c717b;
 }
 
@@ -62,9 +57,7 @@
   width: 100%;
   height: 60px;
   background: #f7f7f7;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #101828;
+font-family: var(--font-inter);  color: #101828;
 }
 
 .inputError {
@@ -77,9 +70,7 @@
   left: 18px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  color: #6c717b;
+font-family: var(--font-inter);  color: #6c717b;
   background: transparent;
   transition: all 0.2s ease-in-out;
   pointer-events: none;
@@ -115,10 +106,7 @@
 }
 
 .error {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 1.5;
   color: #e44848;
   margin-top: 4px;
   display: block;
@@ -135,10 +123,7 @@
   width: 527px;
   height: 56px;
   background: #829b91;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
+font-family: var(--font-inter);  font-weight: 500;
   letter-spacing: -0.01em;
   color: #fff;
   cursor: pointer;

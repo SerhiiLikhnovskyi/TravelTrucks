@@ -5,12 +5,19 @@ import { FaRegMap } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Field, Formik } from "formik";
 import { useFilterStore } from "@/lib/store/useStore";
+import { useQuery } from "@tanstack/react-query";
+import { getFilters } from "@/lib/api/api";
 
 export default function Sidebar() {
   const filters = useFilterStore((state) => state.filters);
   const setFilters = useFilterStore((state) => state.setFilters);
   const resetFilters = useFilterStore((state) => state.resetFilters);
 
+  const { data: filtersData } = useQuery({
+    queryKey: ["filters"],
+    queryFn: getFilters,
+  });
+  console.log(filtersData);
   return (
     <Formik
       enableReinitialize
@@ -20,6 +27,7 @@ export default function Sidebar() {
       }}
       onSubmit={(values) => {
         setFilters(values);
+        console.log(values);
       }}
     >
       {(formik) => (
@@ -35,116 +43,58 @@ export default function Sidebar() {
 
               <fieldset className={css.filterFieldset}>
                 <legend className={css.checkboxDescription}>Camper form</legend>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="form"
-                    value="alcove"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Alcove</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="form"
-                    value="panel_van"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Panel Van</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="form"
-                    value="integrated"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Integrated</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="form"
-                    value="semi_integrated"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Semi Integrated</span>
-                </label>
+                {filtersData?.forms.map((form) => (
+                  <label key={form} className={css.checkbox}>
+                    <Field
+                      className={css.radioInput}
+                      type="radio"
+                      name="form"
+                      value={form}
+                    />
+                    <span className={css.radioCustom}></span>
+                    <span className={css.spanText}>
+                      {form[0].toUpperCase() + form.slice(1).replace("_", " ")}
+                    </span>
+                  </label>
+                ))}
               </fieldset>
-
               <fieldset className={css.filterFieldset}>
                 <legend className={css.checkboxDescription}>Engine</legend>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="engine"
-                    value="diesel"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Diesel</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="engine"
-                    value="petrol"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Petrol</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="engine"
-                    value="hybrid"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Hybrid</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="engine"
-                    value="electric"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Electric</span>
-                </label>
+                {filtersData?.engines.map((engine) => (
+                  <label key={engine} className={css.checkbox}>
+                    <Field
+                      className={css.radioInput}
+                      type="radio"
+                      name="engine"
+                      value={engine}
+                    />
+                    <span className={css.radioCustom}></span>
+                    <span className={css.spanText}>
+                      {engine[0].toUpperCase() +
+                        engine.slice(1).replace("_", " ")}
+                    </span>
+                  </label>
+                ))}
               </fieldset>
-
               <fieldset className={css.filterFieldset}>
                 <legend className={css.checkboxDescription}>
                   Transmission
                 </legend>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="transmission"
-                    value="automatic"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Automatic</span>
-                </label>
-                <label className={css.checkbox}>
-                  <Field
-                    className={css.radioInput}
-                    type="radio"
-                    name="transmission"
-                    value="manual"
-                  />
-                  <span className={css.radioCustom}></span>
-                  <span className={css.spanText}>Manual</span>
-                </label>
+                {filtersData?.transmissions.map((transmission) => (
+                  <label key={transmission} className={css.checkbox}>
+                    <Field
+                      className={css.radioInput}
+                      type="radio"
+                      name="transmission"
+                      value={transmission}
+                    />
+                    <span className={css.radioCustom}></span>
+                    <span className={css.spanText}>
+                      {transmission[0].toUpperCase() +
+                        transmission.slice(1).replace("_", " ")}
+                    </span>
+                  </label>
+                ))}
               </fieldset>
             </div>
           </div>

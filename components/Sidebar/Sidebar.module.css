@@ -14,10 +14,7 @@
 .label {
   display: block;
   margin-bottom: 8px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: var(--font-inter);
   color: #6c717b;
 }
 .filterFieldset {
@@ -44,9 +41,6 @@
   border: none;
   background: #fff;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   color: #101828;
 }
 .filterCheckbox {
@@ -61,17 +55,10 @@
 }
 .checkboxDescription {
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   color: #6c717b;
   padding-bottom: 8px;
 }
 .spanText {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
   color: #101828;
   padding-left: 8px;
 }
@@ -113,8 +100,6 @@
   background: #829b91;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: -0.01em;
   color: #fff;
 }
@@ -133,8 +118,6 @@
   background: #fff;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: -0.01em;
   color: #101828;
 }
@@ -144,7 +127,6 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
-  font-size: 16px;
   color: #101828;
 }
 
