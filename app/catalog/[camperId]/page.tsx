@@ -26,7 +26,6 @@ export default async function Camper({ params }: Props) {
     .catch(() => {
       notFound();
     });
-  console.log("SERVER FETCH:", camperId);
 
   return (
     <HydrationBoundary state={dehydrate(queryClient)}>

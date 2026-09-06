@@ -4,6 +4,7 @@ import React, { use } from "react";
 import Image from "next/image";
 import css from "./NoCampers.module.css";
 import { useFilterStore } from "@/lib/store/useStore";
+import { IoClose } from "react-icons/io5";
 
 export default function NoCampers() {
   const resetFilters = useFilterStore((state) => state.resetFilters);
@@ -29,6 +30,7 @@ export default function NoCampers() {
       </div>
       <div className={css.btnWrapper}>
         <button onClick={() => resetFilters?.()} className={css.btnClear}>
+          <IoClose size={24} />
           Clear filters
         </button>
         <button onClick={() => resetAllFilters?.()} className={css.btnView}>

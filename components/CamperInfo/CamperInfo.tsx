@@ -1,8 +1,8 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FiMap } from "react-icons/fi";
-import { Camper } from "@/lib/api/api";
 import css from "./CamperInfo.module.css";
+import { Camper } from "@/types/types";
 
 type Props = {
   camper: Camper;
@@ -10,7 +10,7 @@ type Props = {
 export default function CamperInfo({ camper }: Props) {
   return (
     <div className={css.content}>
-      <h2 className={css.title}>{camper.name}</h2>
+      <h1 className={css.title}>{camper.name}</h1>
       <div className={css.location}>
         <p className={css.textIcon}>
           <FaStar color="#ffc531" size={16} />

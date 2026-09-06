@@ -2,16 +2,12 @@
 import React from "react";
 import css from "./Form.module.css";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { bookCamper, BookingRequest } from "@/lib/api/api";
-import {
-  Formik,
-  Form as FormikForm,
-  Field,
-  ErrorMessage,
-  useFormikContext,
-} from "formik";
+import { bookCamper } from "@/lib/api/api";
+import { Formik, Form as FormikForm, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { LuCircleAlert } from "react-icons/lu";
+import { BookingRequest } from "@/types/types";
+import toast from "react-hot-toast";
 
 interface FormProps {
   camperId: string;
@@ -37,12 +33,7 @@ export default function Form({ camperId }: FormProps) {
       });
     },
   });
-  function FormContent() {
-    const { errors, touched } = useFormikContext<{
-      name: string;
-      email: string;
-    }>();
-  }
+
   return (
     <div className={css.formWrapper}>
       <div className={css.formDescription}>
@@ -62,6 +53,10 @@ export default function Form({ camperId }: FormProps) {
           mutate(values, {
             onSuccess: () => {
               resetForm();
+              toast.success("Booking successful! We'll contact you soon.");
+            },
+            onError: () => {
+              toast.error("Something went wrong. Please try again.");
             },
           });
         }}
@@ -71,6 +66,7 @@ export default function Form({ camperId }: FormProps) {
             <div className={css.formInput}>
               <div className={css.inputWrapper}>
                 <label
+                  htmlFor="name"
                   className={`${css.errorLabel} ${
                     touched.name && errors.name
                       ? css.labelError
@@ -102,6 +98,7 @@ export default function Form({ camperId }: FormProps) {
 
               <div className={css.inputWrapper}>
                 <label
+                  htmlFor="email"
                   className={`${css.errorLabel} ${
                     touched.email && errors.email
                       ? css.labelError

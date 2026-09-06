@@ -17,7 +17,6 @@ export default function Sidebar() {
     queryKey: ["filters"],
     queryFn: getFilters,
   });
-  console.log(filtersData);
   return (
     <Formik
       enableReinitialize
@@ -27,13 +26,14 @@ export default function Sidebar() {
       }}
       onSubmit={(values) => {
         setFilters(values);
-        console.log(values);
       }}
     >
       {(formik) => (
         <form className={css.sidebar} onSubmit={formik.handleSubmit}>
           <div className={css.fieldGroup}>
-            <label className={css.label}>Location</label>
+            <label htmlFor="location" className={css.label}>
+              Location
+            </label>
             <div className={css.inputWrapper}>
               <FaRegMap size={20} className={css.iconMap} />
               <Field type="text" name="location" className={css.input} />

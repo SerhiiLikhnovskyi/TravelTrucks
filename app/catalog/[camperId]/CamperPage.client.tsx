@@ -24,7 +24,6 @@ export default function CamperPage({ camperId }: Props) {
     queryFn: () => getCamperById(camperId),
     refetchOnMount: false,
   });
-  console.log("CLIENT CAMPER:", camper);
   if (isLoading) {
     return (
       <>

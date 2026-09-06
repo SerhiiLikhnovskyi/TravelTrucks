@@ -22,7 +22,6 @@ export default function Reviews({ camperId }: { camperId: string }) {
           {data?.map((review) => {
             const AvatarLetters =
               review.reviewer_name?.[0]?.toUpperCase() ?? "";
-            console.log(AvatarLetters);
             return (
               <div key={review.id} className={css.reviewList}>
                 <div className={css.upperReviews}>

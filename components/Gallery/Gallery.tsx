@@ -1,5 +1,4 @@
 "use client";
-import { GalleryImage } from "@/lib/api/api";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -8,6 +7,7 @@ import type { Swiper as SwiperType } from "swiper";
 import { FreeMode, Thumbs } from "swiper/modules";
 import css from "./Gallery.module.css";
 import Image from "next/image";
+import { GalleryImage } from "@/types/types";
 
 type Props = {
   gallery: GalleryImage[];
@@ -26,7 +26,7 @@ export default function Gallery({ gallery }: Props) {
         thumbs={{
           swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
         }}
-        className={css.mainSwiper}
+        className={css.firstSwiper}
       >
         {gallery.map((image) => (
           <SwiperSlide key={image.id}>
@@ -47,7 +47,7 @@ export default function Gallery({ gallery }: Props) {
         freeMode
         watchSlidesProgress
         modules={[FreeMode, Navigation, Thumbs]}
-        className={css.thumbsSwiper}
+        className={css.secondSwiper}
       >
         {gallery.map((image) => (
           <SwiperSlide key={image.id}>

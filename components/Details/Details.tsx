@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./Details.module.css";
-import { Camper } from "@/lib/api/api";
+import { Camper } from "@/types/types";
 
 type Props = {
   camper: Camper;

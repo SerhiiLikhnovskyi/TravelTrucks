@@ -5,7 +5,7 @@
   width: 638px;
 }
 
-.mainSwiper {
+.firstSwiper {
   width: 638px;
   height: 508px;
   border-radius: 10px;
@@ -19,12 +19,12 @@
   display: block;
 }
 
-.thumbsSwiper {
+.secondSwiper {
   width: 100%;
   height: 144px;
 }
 
-.thumbsSwiper :global(.swiper-slide) {
+.secondSwiper :global(.swiper-slide) {
   width: 136px !important;
   height: 144px;
   overflow: hidden;
@@ -36,7 +36,7 @@
   transition: outline-color 0.3s ease;
 }
 
-.thumbsSwiper :global(.swiper-slide-thumb-active) {
+.secondSwiper :global(.swiper-slide-thumb-active) {
   border: 3px solid #829b91;
   border-radius: 16px;
 }

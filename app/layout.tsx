@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,11 +17,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html>
+    <html lang="en">
       <body className={`${inter.variable}`}>
         <TanStackProvider>
           <Header />
           {children}
+          <Toaster position="top-center" />
         </TanStackProvider>
       </body>
     </html>
