@@ -7,15 +7,16 @@
   border-radius: 16px;
   padding: 24px;
   width: 650px;
-  height: 360px;
+  min-height: 360px;
+  height: auto;
   background: #f7f7f7;
 }
 .list {
   display: flex;
   flex-wrap: wrap;
+  align-content: flex-start;
   gap: 8px;
-  max-height: 120px;
-  overflow-y: auto;
+  min-height: 48px;
   scrollbar-width: thin;
   scrollbar-color: #d0d5dd transparent;
 }
@@ -39,7 +40,7 @@
   padding-block: 12px;
   padding-inline: 18px;
   min-width: 59px;
-  height: 48px;
+  min-height: 48px;
   background: #f2f4f7;
   mix-blend-mode: multiply;
   overflow: hidden;
